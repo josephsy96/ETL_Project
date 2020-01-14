@@ -7,6 +7,7 @@ Purpose of this script is to pull US Economic Data to present an interactive cha
 #Import Dependencies 
 import os
 import pandas as pd 
+#pip install fredapi
 from fredapi import Fred
 from pprint import pprint 
 
@@ -16,11 +17,13 @@ from config import api_key
 
 fred = Fred(api_key)
 #This is to set the directory for the script
+#Comment the line below out, I'm too lazy to manually type to change my directory
 os.chdir('/Users/josephyi/Documents/VSCODE/FED API Data')
 
 #create parameters for requests
-param = {'':''}
+#param = {'':''}
 
+#Codes to pull: GDP, UNRATE
 print('---' * 20 + '\nWelcome\n' + '---' * 20)
 eco_code = input("Please input the economic code to pull:")
 
