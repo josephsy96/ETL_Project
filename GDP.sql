@@ -61,7 +61,7 @@ ALTER TABLE public."UN_TABLE" OWNER TO postgres;
 CREATE VIEW public."Economy_Blah" WITH (security_barrier='false') AS
  SELECT "GDP_TABLE".date,
     "GDP_TABLE".gdp_value,
-    "UN_TABLE".value
+    "UN_TABLE".unemploy_value
    FROM (public."GDP_TABLE"
      JOIN public."UN_TABLE" ON (("UN_TABLE".date = "GDP_TABLE".date)));
 
